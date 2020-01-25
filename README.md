@@ -6,3 +6,9 @@ Set up the mongodb environment in your system. Create a database with the name e
 
 To run the app - node index (starting point of the app).
 
+
+#Details to run the Angular app
+
+Install the node modules using cmd: npm install 
+
+Then run the cmd: ng serve 
