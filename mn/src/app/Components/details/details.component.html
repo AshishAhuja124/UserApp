@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+  <div class="panel-heading">User detail Form : You can see the detail information of an users.</div>
+  <div class="panel-body">
+    <form class="form-horizontal" *ngIf=employee>
+      <div class="form-group">
+        <label for="code" class="col-sm-2 control-label">Code : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{employee.code}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{employee.name}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{employee.email}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mobile" class="col-sm-2 control-label">Mobile  : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{employee.mobile}}</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="department" class="col-sm-2 control-label">Department : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{employee.department}}</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="status" class="col-sm-2 control-label">Status : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{employee.status}}</p>
+        </div>
+      </div>
+
+
+    </form>
+
+  </div>
+</div>
+<input type="button" value="Go Back"[routerLink]="['/Home']"/>

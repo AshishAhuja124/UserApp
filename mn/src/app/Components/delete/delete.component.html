@@ -1,0 +1,46 @@
+<div class="jumbotron">
+  <div align='center'>
+    <h1>
+      Happy Coding
+    </h1>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+    <input class="form-control" name="search" [(ngModel)]="search" type="text" placeholder="Search User"
+      aria-label="Search">
+  </div>
+
+
+
+  <table class="table rounded-lg z-depth-1-half table-hover">
+    <thead>
+      <tr>
+        <td>Code</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Mobile</td>
+        <td>Department</td>
+        <td>Status</td>
+
+        <td width="275" align="center">Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let employee of model | emp:search'>
+      <td><a [routerLink]="['/detail',employee.code]">{{employee.code}}</a></td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.department}}</td>
+      <td> <button class="btn btn-primary"(click)='alertMe(employee.status)'[appHighlight]=" employee.status">Status </button>     
+        <td width="275">
+        <a class="btn btn-danger" (click)="deleteEmployee(employee._id)">Delete</a>
+        <a class="btn btn-success"  routerLink="/edit/{{employee._id}}">Edit</a>
+
+        
+    </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
