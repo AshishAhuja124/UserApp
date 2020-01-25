@@ -10,7 +10,7 @@ import { Employee } from '../../employee';
 export class AddComponent implements OnInit {
 
   constructor(private empService:EmpService) { }
-  alertMe(val)          //We are calling alert function from home.html//
+  alertMe(val)          
   {
     alert(val);
   }
