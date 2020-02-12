@@ -1,4 +1,4 @@
-#Details to run the Node application:
+##Details to run the Node application:
 
 Install the node modules using - npm install.
 
